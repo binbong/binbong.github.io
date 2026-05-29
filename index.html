@@ -3,42 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>binbong 的网站</title>
-
-    <style>
-        body {
-            margin: 0;
-            background: #111827;
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .card {
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 12px;
-        }
-
-        p {
-            font-size: 20px;
-            color: #d1d5db;
-        }
-    </style>
+    <title>车行天下 — 新能源自驾与用车笔记</title>
+    <meta name="description" content="腾势 N7 车主的真实自驾游记、充电攻略与用车养护经验。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="card">
-    <h1>你好 👋</h1>
-    <p>我的第一个个人网站上线了</p>
-    <p>我是邢立斌</p>
-</div>
+<!-- Navigation -->
+<nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">车行<span>天下</span></a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="travel.html">自驾游</a></li>
+        <li><a href="#vehicle">我的座驾</a></li>
+        <li><a href="#care">养护指南</a></li>
+        <li><a href="#about">关于</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+    </button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-eyebrow">新能源 · 自驾 · 探索</span>
+        <h1 class="hero-title">车行天下</h1>
+        <p class="hero-subtitle">驾驶腾势 N7，用电丈量山河。记录每一次出发，分享每一段路上的风景与经验。</p>
+        <div class="hero-actions">
+            <a href="travel.html" class="btn btn-primary">探索自驾路线 →</a>
+            <a href="#sections" class="btn btn-ghost">了解更多</a>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Sections -->
+<section class="section" id="sections">
+    <div class="section-inner">
+        <div class="section-header">
+            <p class="section-eyebrow">探索</p>
+            <h2 class="section-title">开启你的公路之旅</h2>
+            <p class="section-desc">从路线规划到充电攻略，从车辆养护到旅途故事——这里是一个新能源车主的真实分享空间。</p>
+        </div>
+
+        <div class="feature-grid">
+            <a href="travel.html" class="feature-card large">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80" alt="自驾游">
+                <div class="feature-card-overlay">
+                    <span class="feature-card-tag">核心栏目</span>
+                    <h3 class="feature-card-title">自驾游</h3>
+                    <p class="feature-card-desc">川藏、青甘、独库……精选国内经典自驾路线，含充电规划与季节建议。</p>
+                </div>
+                <span class="feature-card-arrow">→</span>
+            </a>
+
+            <a href="#vehicle" class="feature-card">
+                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&q=80" alt="腾势 N7">
+                <div class="feature-card-overlay">
+                    <span class="feature-card-tag">车型体验</span>
+                    <h3 class="feature-card-title">腾势 N7</h3>
+                    <p class="feature-card-desc">我的座驾，真实续航与长途体验。</p>
+                </div>
+                <span class="feature-card-arrow">→</span>
+            </a>
+
+            <a href="#care" class="feature-card">
+                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80" alt="养护维修">
+                <div class="feature-card-overlay">
+                    <span class="feature-card-tag">用车干货</span>
+                    <h3 class="feature-card-title">养护维修</h3>
+                    <p class="feature-card-desc">电池健康、日常保养与维修避坑。</p>
+                </div>
+                <span class="feature-card-arrow">→</span>
+            </a>
+
+            <a href="#charging" class="feature-card">
+                <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="充电攻略">
+                <div class="feature-card-overlay">
+                    <span class="feature-card-tag">实用攻略</span>
+                    <h3 class="feature-card-title">充电指南</h3>
+                    <p class="feature-card-desc">高速充电、第三方桩选择与续航管理。</p>
+                </div>
+                <span class="feature-card-arrow">→</span>
+            </a>
+
+            <a href="#stories" class="feature-card">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="旅途故事">
+                <div class="feature-card-overlay">
+                    <span class="feature-card-tag">游记</span>
+                    <h3 class="feature-card-title">旅途故事</h3>
+                    <p class="feature-card-desc">路上的风景、人与故事，持续更新中。</p>
+                </div>
+                <span class="feature-card-arrow">→</span>
+            </a>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">经典自驾路线</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">630</div>
+                <div class="stat-label">km CLTC 续航</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">800V</div>
+                <div class="stat-label">高压快充平台</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">路上的可能性</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Vehicle Spotlight -->
+<section class="section" id="vehicle" style="background: var(--bg-elevated);">
+    <div class="section-inner">
+        <div class="spotlight">
+            <div class="spotlight-image">
+                <img src="https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80" alt="腾势 N7">
+            </div>
+            <div>
+                <p class="section-eyebrow">我的座驾</p>
+                <h2 class="section-title">腾势 N7</h2>
+                <p class="section-desc" style="margin-top: 20px;">
+                    比亚迪与奔驰联合打造的高端新能源 SUV。云辇智能车身控制系统、800V 高压平台、双电机四驱——无论是城市通勤还是跨省自驾，它都是我最可靠的伙伴。
+                </p>
+                <div class="spotlight-specs">
+                    <div class="spec-item">
+                        <div class="spec-value">630 km</div>
+                        <div class="spec-label">CLTC 综合续航</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-value">3.9 秒</div>
+                        <div class="spec-label">零百加速</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-value">800V</div>
+                        <div class="spec-label">高压快充</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-value">云辇-A</div>
+                        <div class="spec-label">智能空气悬架</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Care Section -->
+<section class="section" id="care">
+    <div class="section-inner">
+        <div class="section-header">
+            <p class="section-eyebrow">用车干货</p>
+            <h2 class="section-title">养护与维修</h2>
+            <p class="section-desc">电车也需要精心呵护。从日常保养到深度维修，分享真实经验，帮你少踩坑。</p>
+        </div>
+        <div class="route-grid">
+            <div class="route-card">
+                <div class="route-card-body">
+                    <p class="route-card-region">日常保养</p>
+                    <h3 class="route-card-title">电池健康维护</h3>
+                    <p class="route-card-desc">充电习惯、温度管理、长期停放注意事项——延长电池寿命的关键细节。</p>
+                    <div class="route-highlights">
+                        <span class="route-tag">充电习惯</span>
+                        <span class="route-tag">温度管理</span>
+                        <span class="route-tag">SOC 控制</span>
+                    </div>
+                </div>
+            </div>
+            <div class="route-card">
+                <div class="route-card-body">
+                    <p class="route-card-region">定期检查</p>
+                    <h3 class="route-card-title">轮胎与制动</h3>
+                    <p class="route-card-desc">电车扭矩大、车身重，轮胎磨损快。胎压监测、换位周期、刹车片检查要点。</p>
+                    <div class="route-highlights">
+                        <span class="route-tag">胎压</span>
+                        <span class="route-tag">磨损</span>
+                        <span class="route-tag">制动液</span>
+                    </div>
+                </div>
+            </div>
+            <div class="route-card">
+                <div class="route-card-body">
+                    <p class="route-card-region">维修避坑</p>
+                    <h3 class="route-card-title">售后与保修</h3>
+                    <p class="route-card-desc">4S 店 vs 第三方维修、保修范围、常见故障处理——真实售后体验分享。</p>
+                    <div class="route-highlights">
+                        <span class="route-tag">保修政策</span>
+                        <span class="route-tag">维修费用</span>
+                        <span class="route-tag">OTA 升级</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quote Banner -->
+<section class="quote-banner">
+    <div class="quote-banner-bg" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1920&q=80');"></div>
+    <div class="quote-banner-content">
+        <p class="quote-text">"最美的风景，永远在下一段路上。"</p>
+        <p class="quote-author">— 车行天下</p>
+    </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about" style="background: var(--bg-elevated);">
+    <div class="section-inner">
+        <div class="section-header">
+            <p class="section-eyebrow">关于</p>
+            <h2 class="section-title">关于本站</h2>
+            <p class="section-desc">
+                你好，我是 Robin，腾势 N7 车主。这个网站记录我的自驾旅程与用车心得——不是汽车媒体，只是一个热爱开车上路的人。希望这些内容能帮你规划下一次出发。
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">车行<span>天下</span></div>
+            <p class="footer-desc">新能源自驾与用车笔记。驾驶腾势 N7，探索中国之美。</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>栏目</h4>
+                <ul>
+                    <li><a href="travel.html">自驾游</a></li>
+                    <li><a href="#vehicle">我的座驾</a></li>
+                    <li><a href="#care">养护指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系</h4>
+                <ul>
+                    <li><a href="https://github.com/binbong" target="_blank">GitHub</a></li>
+                    <li><a href="mailto:hello@tahoo.me">邮箱</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 车行天下 · tahoo.me</p>
+        <p>驾驶安全，文明出行</p>
+    </div>
+</footer>
+
+<script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>

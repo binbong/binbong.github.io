@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自驾游路线 — 车行天下</title>
+    <meta name="description" content="中国国内经典新能源自驾路线：川藏线、青甘大环线、独库公路、海南环岛等。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">车行<span>天下</span></a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="travel.html" class="active">自驾游</a></li>
+        <li><a href="index.html#vehicle">我的座驾</a></li>
+        <li><a href="index.html#care">养护指南</a></li>
+        <li><a href="index.html#about">关于</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+    </button>
+</nav>
+
+<section class="page-hero">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-eyebrow">Road Trip</span>
+        <h1 class="hero-title">自驾游路线</h1>
+        <p class="hero-subtitle">精选国内经典自驾线路，含里程、最佳季节与新能源出行提示。</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-inner">
+        <div class="section-header">
+            <p class="section-eyebrow">路线地图</p>
+            <h2 class="section-title">国内主要自驾路线</h2>
+            <p class="section-desc">按区域浏览，点击标签筛选。开腾势 N7 出发前，记得提前规划充电站点。</p>
+        </div>
+
+        <div class="route-filters" id="routeFilters">
+            <button class="filter-btn active" data-region="all">全部</button>
+            <button class="filter-btn" data-region="西南">西南</button>
+            <button class="filter-btn" data-region="西北">西北</button>
+            <button class="filter-btn" data-region="华北">华北</button>
+            <button class="filter-btn" data-region="东北">东北</button>
+            <button class="filter-btn" data-region="华东">华东</button>
+            <button class="filter-btn" data-region="华南">华南</button>
+            <button class="filter-btn" data-region="华中">华中</button>
+        </div>
+
+        <div class="route-grid" id="routeGrid">
+
+            <article class="route-card" data-region="西南">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="川藏线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西南 · 国道 G318</p>
+                    <h3 class="route-card-title">川藏线</h3>
+                    <p class="route-card-desc">中国最经典的进藏公路，成都出发经雅安、理塘、林芝至拉萨，雪山、草原、峡谷一路相伴。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 2,150 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 7–12 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 5–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">稻城亚丁</span>
+                        <span class="route-tag">然乌湖</span>
+                        <span class="route-tag">林芝桃花</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西南">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="川西环线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西南 · 四川</p>
+                    <h3 class="route-card-title">川西环线</h3>
+                    <p class="route-card-desc">成都出发，经四姑娘山、丹巴、新都桥、稻城亚丁、理塘折返，高原风光精华浓缩版。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 1,800 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 6–8 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 9–11 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">新都桥</span>
+                        <span class="route-tag">色达</span>
+                        <span class="route-tag">海子山</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西南">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="滇藏线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西南 · 国道 G214</p>
+                    <h3 class="route-card-title">滇藏线</h3>
+                    <p class="route-card-desc">云南昆明或大理出发，经香格里拉、德钦梅里雪山，入藏至拉萨，人文与地貌兼具。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 1,900 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 8–10 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 4–6、9–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">梅里雪山</span>
+                        <span class="route-tag">盐井</span>
+                        <span class="route-tag">香格里拉</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西南">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" alt="丙察察">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西南 · 极限越野</p>
+                    <h3 class="route-card-title">丙察察</h3>
+                    <p class="route-card-desc">云南丙中洛经察瓦龙至西藏察隅，中国最险峻的进藏短线之一，风景原始震撼。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 300 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 3–5 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 5–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">怒江大峡谷</span>
+                        <span class="route-tag">原始森林</span>
+                        <span class="route-tag">高难度</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="青甘大环线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西北 · 青海甘肃</p>
+                    <h3 class="route-card-title">青甘大环线</h3>
+                    <p class="route-card-desc">西宁出发环青海湖，经茶卡盐湖、敦煌、嘉峪关、张掖丹霞，西北风光一网打尽。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 2,700 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 7–9 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 6–9 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">青海湖</span>
+                        <span class="route-tag">茶卡盐湖</span>
+                        <span class="route-tag">莫高窟</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="新疆北疆环线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西北 · 新疆</p>
+                    <h3 class="route-card-title">北疆环线</h3>
+                    <p class="route-card-desc">乌鲁木齐—布尔津—喀纳斯—禾木—克拉玛依—赛里木湖，草原、湖泊、森林交织。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 2,500 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 8–12 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 6–9 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">喀纳斯</span>
+                        <span class="route-tag">禾木村</span>
+                        <span class="route-tag">赛里木湖</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="南疆环线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西北 · 新疆</p>
+                    <h3 class="route-card-title">南疆环线</h3>
+                    <p class="route-card-desc">喀什—塔县—盘龙古道—和田—阿克苏，帕米尔高原与丝绸之路南道，异域风情浓郁。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 2,000 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 8–10 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 4–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">慕士塔格峰</span>
+                        <span class="route-tag">盘龙古道</span>
+                        <span class="route-tag">喀什古城</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="独库公路">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西北 · 新疆</p>
+                    <h3 class="route-card-title">独库公路</h3>
+                    <p class="route-card-desc">连接南北疆的景观大道，一日穿越四季，雪山、峡谷、草原、雅丹地貌尽收眼底。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 561 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 2–3 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 6–9 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">天山</span>
+                        <span class="route-tag">巴音布鲁克</span>
+                        <span class="route-tag">限定开放</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="丝绸之路">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西北 · 丝路</p>
+                    <h3 class="route-card-title">丝绸之路</h3>
+                    <p class="route-card-desc">西安至敦煌，沿古丝路西行，兵马俑、嘉峪关、莫高窟，历史与荒漠风光并存。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 1,700 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 6–8 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 5–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">敦煌</span>
+                        <span class="route-tag">嘉峪关</span>
+                        <span class="route-tag">张掖丹霞</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="青藏线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西北 · 国道 G109</p>
+                    <h3 class="route-card-title">青藏线</h3>
+                    <p class="route-card-desc">西宁至拉萨，途经青海湖、可可西里、唐古拉山口，路况相对较好，适合首次进藏。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 1,900 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 5–7 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 5–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">可可西里</span>
+                        <span class="route-tag">纳木错</span>
+                        <span class="route-tag">高原公路</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="西北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="新藏线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">西北 · 国道 G219</p>
+                    <h3 class="route-card-title">新藏线</h3>
+                    <p class="route-card-desc">新疆叶城至西藏狮泉河，穿越昆仑山与羌塘无人区，中国海拔最高、最荒凉的公路之一。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 2,340 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 7–10 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 6–9 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">界山达坂</span>
+                        <span class="route-tag">无人区</span>
+                        <span class="route-tag">极限挑战</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="华北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" alt="草原天路">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">华北 · 河北</p>
+                    <h3 class="route-card-title">草原天路</h3>
+                    <p class="route-card-desc">张北草原天路，蜿蜒于坝上高原，夏季油菜花海与风车草原，北京周边热门短途自驾。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 130 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 1–2 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 6–8 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">风车草原</span>
+                        <span class="route-tag">周末游</span>
+                        <span class="route-tag">充电便利</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="华北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" alt="额济纳胡杨林">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">华北 · 内蒙古</p>
+                    <h3 class="route-card-title">额济纳胡杨林</h3>
+                    <p class="route-card-desc">内蒙古阿拉善额济纳旗，金秋胡杨林金黄一片，可串联嘉峪关、黑城遗址。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 视起点而定</span>
+                        <span class="route-meta-item"><strong>建议</strong> 3–5 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 9 月下旬–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">胡杨林</span>
+                        <span class="route-tag">居延海</span>
+                        <span class="route-tag">秋季限定</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="东北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" alt="呼伦贝尔">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">东北 · 内蒙古</p>
+                    <h3 class="route-card-title">呼伦贝尔大草原</h3>
+                    <p class="route-card-desc">海拉尔—额尔古纳—满洲里，辽阔草原、中俄边境、蒙古族风情，夏季绿草如茵。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 1,000 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 5–7 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 6–8 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">莫日格勒河</span>
+                        <span class="route-tag">满洲里</span>
+                        <span class="route-tag">边境风光</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="东北">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" alt="东北边境线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">东北 · 边境</p>
+                    <h3 class="route-card-title">东北边境线</h3>
+                    <p class="route-card-desc">丹东—长白山—延吉—珲春，鸭绿江、长白山天池、朝鲜族风情，东北秋色绝美。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 1,200 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 6–8 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 9–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">长白山</span>
+                        <span class="route-tag">延吉美食</span>
+                        <span class="route-tag">图们江</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="华东">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="皖南川藏线">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">华东 · 安徽</p>
+                    <h3 class="route-card-title">皖南川藏线</h3>
+                    <p class="route-card-desc">宁国至泾县，江南版川藏线，竹海、梯田、古村落，周末短途自驾热门选择。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 120 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 2–3 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 3–5、9–11 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">青龙湾</span>
+                        <span class="route-tag">水墨汀溪</span>
+                        <span class="route-tag">周末首选</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="华东">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="千岛湖">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">华东 · 浙江</p>
+                    <h3 class="route-card-title">千岛湖环湖</h3>
+                    <p class="route-card-desc">杭州出发环千岛湖，碧水千岛、隧道桥梁、民宿林立，适合休闲放松之旅。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 150 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 2–3 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 4–6、9–11 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">湖光山色</span>
+                        <span class="route-tag">骑行徒步</span>
+                        <span class="route-tag">充电方便</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="华南">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="海南环岛">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">华南 · 海南</p>
+                    <h3 class="route-card-title">海南环岛</h3>
+                    <p class="route-card-desc">海口或三亚出发环岛，椰林海滩、热带风情、免税购物，冬季避寒自驾首选。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 800 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 5–7 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 11 月–次年 3 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">三亚</span>
+                        <span class="route-tag">万宁</span>
+                        <span class="route-tag">环岛旅游公路</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="华南">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="广西桂林">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">华南 · 广西</p>
+                    <h3 class="route-card-title">桂林山水线</h3>
+                    <p class="route-card-desc">桂林—阳朔—龙脊梯田，漓江山水、喀斯特地貌，中国山水美学代表。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 300 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 3–5 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 4–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">漓江</span>
+                        <span class="route-tag">阳朔</span>
+                        <span class="route-tag">龙脊梯田</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="华中">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="张家界凤凰">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">华中 · 湖南</p>
+                    <h3 class="route-card-title">张家界—凤凰古城</h3>
+                    <p class="route-card-desc">张家界国家森林公园奇峰怪石，驱车至凤凰古城体验湘西吊脚楼与沱江夜景。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 230 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 4–6 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 4–5、9–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">天门山</span>
+                        <span class="route-tag">凤凰古城</span>
+                        <span class="route-tag">武陵源</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="华中">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="恩施大峡谷">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">华中 · 湖北</p>
+                    <h3 class="route-card-title">恩施大峡谷</h3>
+                    <p class="route-card-desc">湖北恩施秘境，地缝、绝壁、云海，被誉为「中国仙本那」，适合深度慢游。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 视路线而定</span>
+                        <span class="route-meta-item"><strong>建议</strong> 3–5 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 4–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">屏山峡谷</span>
+                        <span class="route-tag">土司城</span>
+                        <span class="route-tag">小众秘境</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="route-card" data-region="华中">
+                <div class="route-card-image">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="贵州黔东南">
+                </div>
+                <div class="route-card-body">
+                    <p class="route-card-region">华中 · 贵州</p>
+                    <h3 class="route-card-title">黔东南苗寨线</h3>
+                    <p class="route-card-desc">贵阳—凯里—西江千户苗寨—荔波小七孔，少数民族风情与喀斯特山水交融。</p>
+                    <div class="route-meta">
+                        <span class="route-meta-item"><strong>里程</strong> 约 600 km</span>
+                        <span class="route-meta-item"><strong>建议</strong> 5–7 天</span>
+                        <span class="route-meta-item"><strong>最佳</strong> 4–10 月</span>
+                    </div>
+                    <div class="route-highlights">
+                        <span class="route-tag">西江苗寨</span>
+                        <span class="route-tag">荔波</span>
+                        <span class="route-tag">镇远古镇</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section class="quote-banner">
+    <div class="quote-banner-bg" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80');"></div>
+    <div class="quote-banner-content">
+        <p class="quote-text">"路在脚下，景在前方。规划好充电，安心出发。"</p>
+        <p class="quote-author">— Robin · 腾势 N7</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">车行<span>天下</span></div>
+            <p class="footer-desc">新能源自驾与用车笔记。驾驶腾势 N7，探索中国之美。</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>栏目</h4>
+                <ul>
+                    <li><a href="travel.html">自驾游</a></li>
+                    <li><a href="index.html#vehicle">我的座驾</a></li>
+                    <li><a href="index.html#care">养护指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系</h4>
+                <ul>
+                    <li><a href="https://github.com/binbong" target="_blank">GitHub</a></li>
+                    <li><a href="mailto:hello@tahoo.me">邮箱</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 车行天下 · tahoo.me</p>
+        <p>驾驶安全，文明出行</p>
+    </div>
+</footer>
+
+<script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    const filters = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.route-card');
+
+    filters.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filters.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const region = btn.dataset.region;
+            cards.forEach(card => {
+                card.style.display = region === 'all' || card.dataset.region === region ? '' : 'none';
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
