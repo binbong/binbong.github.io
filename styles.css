@@ -28,6 +28,9 @@
 
 html {
     scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 body {
@@ -44,8 +47,8 @@ strong, b {
     color: var(--text);
 }
 
-p, li, span, label {
-    color: inherit;
+p, li, label {
+    color: var(--text-secondary);
 }
 
 button,
@@ -54,8 +57,22 @@ select,
 textarea {
     font-family: inherit;
     color: var(--text);
+    background-color: transparent;
     -webkit-appearance: none;
     appearance: none;
+}
+
+/* 防止 Chrome 自动深色模式把文字改成黑色 */
+.section,
+.section-inner,
+.route-card-body,
+.detail-inner,
+.detail-body,
+.footer,
+.stat-item,
+.spec-item,
+.nav {
+    color: var(--text);
 }
 
 a:link {
