@@ -1,0 +1,319 @@
+/* Route detail pages — National Geographic editorial */
+
+.route-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.route-card-link:hover {
+    color: inherit;
+}
+
+.route-card-cta {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+}
+
+.route-card-link:hover .route-card-cta {
+    color: var(--accent-hover);
+}
+
+/* ── Detail Hero ── */
+
+.detail-hero {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.detail-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.detail-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 48px) clamp(48px, 8vh, 80px);
+}
+
+.detail-back {
+    display: inline-block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    transition: color 0.2s;
+}
+
+.detail-back:hover {
+    color: #fff;
+}
+
+.detail-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-stat-val {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.detail-stat-lbl {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 0.06em;
+}
+
+/* ── Detail Body ── */
+
+.detail-body {
+    background: var(--bg);
+}
+
+.detail-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: clamp(60px, 10vw, 100px) clamp(20px, 5vw, 48px);
+}
+
+.detail-lead {
+    max-width: 780px;
+    margin-bottom: 72px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-lead-text {
+    font-family: var(--font-serif);
+    font-size: clamp(20px, 2.8vw, 26px);
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 28px;
+}
+
+.detail-tags {
+    margin-top: 8px;
+}
+
+.detail-section {
+    margin-bottom: 72px;
+}
+
+.detail-section .section-title {
+    margin-bottom: 32px;
+}
+
+.detail-section .section-desc {
+    margin-bottom: 24px;
+    max-width: 680px;
+}
+
+/* ── Gallery ── */
+
+.detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.detail-gallery-item {
+    margin: 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.detail-gallery-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.detail-gallery-item figcaption {
+    padding: 14px 18px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* ── Lists ── */
+
+.detail-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 720px;
+}
+
+.detail-list li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+.detail-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+/* ── Route Stops ── */
+
+.detail-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.route-stops {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.route-stop {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.route-stop-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(245, 166, 35, 0.15);
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.route-stop strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 4px;
+    color: var(--text);
+}
+
+.route-stop-km {
+    font-size: 13px;
+    color: var(--accent);
+    margin-left: 8px;
+}
+
+.route-stop p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+/* ── Map ── */
+
+.detail-map-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+}
+
+.detail-map {
+    width: 100%;
+    height: 360px;
+    border: 0;
+    display: block;
+    filter: saturate(0.85) brightness(0.9);
+}
+
+.detail-map-note {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.detail-map-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.detail-map-link:hover {
+    color: var(--accent-hover);
+}
+
+/* ── EV Section ── */
+
+.detail-ev {
+    background: var(--bg-elevated);
+    margin-left: calc(-1 * clamp(20px, 5vw, 48px));
+    margin-right: calc(-1 * clamp(20px, 5vw, 48px));
+    padding: 48px clamp(20px, 5vw, 48px);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+}
+
+.detail-ev-list li {
+    color: var(--text-secondary);
+}
+
+.detail-nav-bottom {
+    padding: 0 clamp(20px, 5vw, 48px) 80px;
+}
+
+.detail-nav-inner {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .detail-split {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-stats {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-gallery {
+        grid-template-columns: 1fr;
+    }
+}
