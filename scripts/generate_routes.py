@@ -846,6 +846,7 @@ def render_detail(route: dict, paths: dict) -> str:
     <div class="footer-bottom"><p>© 2026 车行天下 · tahoo.me</p></div>
 </footer>
 
+<script src="../theme-guard.js"></script>
 <script>
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
