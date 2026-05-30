@@ -5,8 +5,9 @@
     --bg-elevated: #141414;
     --bg-card: #1c1c1e;
     --text: #f5f5f7;
-    --text-secondary: #a1a1a6;
-    --text-muted: #6e6e73;
+    --text-secondary: #c8c8cc;
+    --text-muted: #98989d;
+    --text-on-accent: #1a1200;
     --accent: #f5a623;
     --accent-hover: #ffc04d;
     --border: rgba(255, 255, 255, 0.08);
@@ -36,6 +37,11 @@ body {
     font-size: 17px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong, b {
+    color: var(--text);
 }
 
 img {
@@ -171,14 +177,17 @@ a {
     line-height: 1.05;
     letter-spacing: -0.02em;
     margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
     font-size: clamp(18px, 2.5vw, 24px);
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.88);
     max-width: 560px;
     font-weight: 400;
     margin-bottom: 36px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
 }
 
 .btn {
@@ -196,7 +205,7 @@ a {
 
 .btn-primary {
     background: var(--accent);
-    color: #000;
+    color: var(--text-on-accent);
 }
 
 .btn-primary:hover {
@@ -251,6 +260,7 @@ a {
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.01em;
+    color: var(--text);
 }
 
 .section-desc {
@@ -296,7 +306,7 @@ a {
 .feature-card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 60%);
+    background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.2) 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -305,7 +315,7 @@ a {
 }
 
 .feature-card:hover .feature-card-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%);
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.25) 100%);
 }
 
 .feature-card-tag {
@@ -322,12 +332,15 @@ a {
     font-size: clamp(22px, 3vw, 32px);
     font-weight: 700;
     margin-bottom: 8px;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .feature-card-desc {
     font-size: 14px;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.88);
     line-height: 1.5;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
 .feature-card-arrow {
@@ -371,6 +384,12 @@ a {
     text-align: center;
 }
 
+.stat-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+}
+
 .stat-number {
     font-family: var(--font-serif);
     font-size: 40px;
@@ -378,12 +397,6 @@ a {
     color: var(--accent);
     line-height: 1;
     margin-bottom: 8px;
-}
-
-.stat-label {
-    font-size: 13px;
-    color: var(--text-secondary);
-    letter-spacing: 0.05em;
 }
 
 /* ── Vehicle Spotlight ── */
@@ -405,6 +418,11 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+}
+
+.feature-card img {
+    object-position: center;
 }
 
 .spotlight-specs {
@@ -425,6 +443,7 @@ a {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 4px;
+    color: var(--text);
 }
 
 .spec-label {
@@ -456,8 +475,9 @@ a {
 .filter-btn:hover,
 .filter-btn.active {
     background: var(--accent);
-    color: #000;
+    color: var(--text-on-accent);
     border-color: var(--accent);
+    font-weight: 600;
 }
 
 .route-grid {
@@ -513,6 +533,7 @@ a {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 12px;
+    color: var(--text);
 }
 
 .route-card-desc {
@@ -539,8 +560,8 @@ a {
 }
 
 .route-meta-item strong {
-    color: var(--text-secondary);
-    font-weight: 500;
+    color: var(--text);
+    font-weight: 600;
 }
 
 .route-highlights {
@@ -554,8 +575,9 @@ a {
     padding: 4px 12px;
     border-radius: 980px;
     font-size: 12px;
-    background: rgba(245, 166, 35, 0.12);
-    color: var(--accent);
+    background: rgba(245, 166, 35, 0.18);
+    color: #ffd080;
+    border: 1px solid rgba(245, 166, 35, 0.25);
 }
 
 /* ── Quote Banner ── */
@@ -589,11 +611,13 @@ a {
     font-style: italic;
     line-height: 1.4;
     margin-bottom: 24px;
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .quote-author {
     font-size: 14px;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85);
     letter-spacing: 0.1em;
 }
 
