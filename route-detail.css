@@ -2,12 +2,25 @@
 
 .route-card-link {
     display: block;
-    color: inherit;
+    color: var(--text);
     text-decoration: none;
 }
 
-.route-card-link:hover {
-    color: inherit;
+.route-card-link:hover,
+.route-card-link:visited {
+    color: var(--text);
+}
+
+.route-card-link .route-card-desc {
+    color: var(--text-secondary);
+}
+
+.route-card-link .route-meta-item {
+    color: var(--text-muted);
+}
+
+.route-card-link .route-meta-item strong {
+    color: var(--text-secondary);
 }
 
 .route-card-cta {
@@ -237,7 +250,7 @@
 
 .route-stop p {
     font-size: 15px;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     margin-top: 6px;
     line-height: 1.5;
 }
@@ -287,6 +300,14 @@
     padding: 48px clamp(20px, 5vw, 48px);
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
+}
+
+.detail-ev .section-desc {
+    color: var(--text-secondary);
+}
+
+.detail-section .section-desc {
+    color: var(--text-secondary);
 }
 
 .detail-ev-list li {
