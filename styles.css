@@ -216,13 +216,15 @@ a {
     line-height: 1.05;
     letter-spacing: -0.02em;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
     font-size: clamp(18px, 2.5vw, 24px);
-    color: rgba(255, 255, 255, 0.88);
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9) !important;
     max-width: 560px;
     font-weight: 400;
     margin-bottom: 36px;
