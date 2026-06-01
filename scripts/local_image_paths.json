@@ -1,0 +1,156 @@
+{
+  "chuanzang": [
+    "images/routes/chuanzang/gallery-1.jpg",
+    "images/routes/chuanzang/gallery-2.jpg",
+    "images/routes/chuanzang/gallery-3.jpg",
+    "images/routes/chuanzang/gallery-4.jpg",
+    "images/routes/chuanzang/gallery-5.jpg"
+  ],
+  "chuanxi": [
+    "images/routes/chuanxi/gallery-1.jpg",
+    "images/routes/chuanxi/gallery-2.jpg",
+    "images/routes/chuanxi/gallery-3.jpg",
+    "images/routes/chuanxi/gallery-4.jpg",
+    "images/routes/chuanxi/gallery-5.jpg"
+  ],
+  "dianzang": [
+    "images/routes/dianzang/gallery-1.jpg",
+    "images/routes/dianzang/gallery-2.jpg",
+    "images/routes/dianzang/gallery-3.jpg",
+    "images/routes/dianzang/gallery-4.jpg",
+    "images/routes/dianzang/gallery-5.jpg"
+  ],
+  "bingchacha": [
+    "images/routes/bingchacha/gallery-1.jpg",
+    "images/routes/bingchacha/gallery-2.jpg",
+    "images/routes/bingchacha/gallery-3.jpg",
+    "images/routes/bingchacha/gallery-4.jpg",
+    "images/routes/bingchacha/gallery-5.jpg"
+  ],
+  "qinggan": [
+    "images/routes/qinggan/gallery-1.jpg",
+    "images/routes/qinggan/gallery-2.jpg",
+    "images/routes/qinggan/gallery-3.jpg",
+    "images/routes/qinggan/gallery-4.jpg",
+    "images/routes/qinggan/gallery-5.jpg"
+  ],
+  "beijiang": [
+    "images/routes/beijiang/gallery-1.jpg",
+    "images/routes/beijiang/gallery-2.jpg",
+    "images/routes/beijiang/gallery-3.jpg",
+    "images/routes/beijiang/gallery-4.jpg",
+    "images/routes/beijiang/gallery-5.jpg"
+  ],
+  "nanjiang": [
+    "images/routes/nanjiang/gallery-1.jpg",
+    "images/routes/nanjiang/gallery-2.jpg",
+    "images/routes/nanjiang/gallery-3.jpg",
+    "images/routes/nanjiang/gallery-4.jpg",
+    "images/routes/nanjiang/gallery-5.jpg"
+  ],
+  "duku": [
+    "images/routes/duku/gallery-1.jpg",
+    "images/routes/duku/gallery-2.jpg",
+    "images/routes/duku/gallery-3.jpg",
+    "images/routes/duku/gallery-4.jpg",
+    "images/routes/duku/gallery-5.jpg"
+  ],
+  "silkroad": [
+    "images/routes/silkroad/gallery-1.jpg",
+    "images/routes/silkroad/gallery-2.jpg",
+    "images/routes/silkroad/gallery-3.jpg",
+    "images/routes/silkroad/gallery-4.jpg",
+    "images/routes/silkroad/gallery-5.jpg"
+  ],
+  "qingzang": [
+    "images/routes/qingzang/gallery-1.jpg",
+    "images/routes/qingzang/gallery-2.jpg",
+    "images/routes/qingzang/gallery-3.jpg",
+    "images/routes/qingzang/gallery-4.jpg",
+    "images/routes/qingzang/gallery-5.jpg"
+  ],
+  "xinzang": [
+    "images/routes/xinzang/gallery-1.jpg",
+    "images/routes/xinzang/gallery-2.jpg",
+    "images/routes/xinzang/gallery-3.jpg",
+    "images/routes/xinzang/gallery-4.jpg",
+    "images/routes/xinzang/gallery-5.jpg"
+  ],
+  "caoyuan": [
+    "images/routes/caoyuan/gallery-1.jpg",
+    "images/routes/caoyuan/gallery-2.jpg",
+    "images/routes/caoyuan/gallery-3.jpg",
+    "images/routes/caoyuan/gallery-4.jpg",
+    "images/routes/caoyuan/gallery-5.jpg"
+  ],
+  "ejina": [
+    "images/routes/ejina/gallery-1.jpg",
+    "images/routes/ejina/gallery-2.jpg",
+    "images/routes/ejina/gallery-3.jpg",
+    "images/routes/ejina/gallery-4.jpg",
+    "images/routes/ejina/gallery-5.jpg"
+  ],
+  "hulunbeier": [
+    "images/routes/hulunbeier/gallery-1.jpg",
+    "images/routes/hulunbeier/gallery-2.jpg",
+    "images/routes/hulunbeier/gallery-3.jpg",
+    "images/routes/hulunbeier/gallery-4.jpg",
+    "images/routes/hulunbeier/gallery-5.jpg"
+  ],
+  "dongbei": [
+    "images/routes/dongbei/gallery-1.jpg",
+    "images/routes/dongbei/gallery-2.jpg",
+    "images/routes/dongbei/gallery-3.jpg",
+    "images/routes/dongbei/gallery-4.jpg",
+    "images/routes/dongbei/gallery-5.jpg"
+  ],
+  "wannan": [
+    "images/routes/wannan/gallery-1.jpg",
+    "images/routes/wannan/gallery-2.jpg",
+    "images/routes/wannan/gallery-3.jpg",
+    "images/routes/wannan/gallery-4.jpg",
+    "images/routes/wannan/gallery-5.jpg"
+  ],
+  "qiandaohu": [
+    "images/routes/qiandaohu/gallery-1.jpg",
+    "images/routes/qiandaohu/gallery-2.jpg",
+    "images/routes/qiandaohu/gallery-3.jpg",
+    "images/routes/qiandaohu/gallery-4.jpg",
+    "images/routes/qiandaohu/gallery-5.jpg"
+  ],
+  "hainan": [
+    "images/routes/hainan/gallery-1.jpg",
+    "images/routes/hainan/gallery-2.jpg",
+    "images/routes/hainan/gallery-3.jpg",
+    "images/routes/hainan/gallery-4.jpg",
+    "images/routes/hainan/gallery-5.jpg"
+  ],
+  "guilin": [
+    "images/routes/guilin/gallery-1.jpg",
+    "images/routes/guilin/gallery-2.jpg",
+    "images/routes/guilin/gallery-3.jpg",
+    "images/routes/guilin/gallery-4.jpg",
+    "images/routes/guilin/gallery-5.jpg"
+  ],
+  "zhangjiajie": [
+    "images/routes/zhangjiajie/gallery-1.jpg",
+    "images/routes/zhangjiajie/gallery-2.jpg",
+    "images/routes/zhangjiajie/gallery-3.jpg",
+    "images/routes/zhangjiajie/gallery-4.jpg",
+    "images/routes/zhangjiajie/gallery-5.jpg"
+  ],
+  "enshi": [
+    "images/routes/enshi/gallery-1.jpg",
+    "images/routes/enshi/gallery-2.jpg",
+    "images/routes/enshi/gallery-3.jpg",
+    "images/routes/enshi/gallery-4.jpg",
+    "images/routes/enshi/gallery-5.jpg"
+  ],
+  "qiandongnan": [
+    "images/routes/qiandongnan/gallery-1.jpg",
+    "images/routes/qiandongnan/gallery-2.jpg",
+    "images/routes/qiandongnan/gallery-3.jpg",
+    "images/routes/qiandongnan/gallery-4.jpg",
+    "images/routes/qiandongnan/gallery-5.jpg"
+  ]
+}
