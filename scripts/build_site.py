@@ -8,7 +8,7 @@ from pathlib import Path
 from routes_data import ROUTES
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE_DIR = ROOT
+SITE_DIR = ROOT / "docs"
 DATA_DIR = SITE_DIR / "data"
 ASSETS_JS = SITE_DIR / "assets" / "js"
 TRAVEL_HTML = SITE_DIR / "travel.html"
@@ -83,7 +83,6 @@ def normalize_route(route: dict) -> dict:
 
 
 def export_data_files() -> tuple[Path, Path]:
-    """Write JSON (for fetch) and JS bundle (for file:// without a server)."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     data = [normalize_route(r) for r in ROUTES]
     json_path = DATA_DIR / "routes.json"
@@ -111,13 +110,13 @@ def update_travel_html() -> None:
 
 
 def main():
-    if not SITE_DIR.is_dir():
-        raise SystemExit(f"缺少发布目录 {SITE_DIR}")
+    SITE_DIR.mkdir(exist_ok=True)
+    (SITE_DIR / ".nojekyll").touch(exist_ok=True)
     json_path, js_path = export_data_files()
     update_travel_html()
-    print(f"Site output: {SITE_DIR} (repository root, GitHub Pages /)")
-    print(f"Wrote {json_path} ({len(ROUTES)} routes)")
-    print(f"Wrote {js_path}")
+    print(f"Built site → {SITE_DIR}/")
+    print(f"  {json_path.name} ({len(ROUTES)} routes)")
+    print(f"  {js_path.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
