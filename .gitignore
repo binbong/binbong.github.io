@@ -1,1 +1,11 @@
+# ── 本地开发（不提交）──
+tools/
+serve.sh
+本地预览.command
+.DS_Store
+
+# ── Python 构建缓存 ──
 scripts/__pycache__/
+*.pyc
+scripts/local_image_paths.json
+scripts/image_urls.json

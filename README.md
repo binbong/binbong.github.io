@@ -1,34 +1,67 @@
 # binbong.github.io
 
-个人站点「车行天下」— 静态 HTML，托管于 GitHub Pages（tahoo.me）。
+个人站点「车行天下」— 静态站，托管于 GitHub Pages（tahoo.me）。
 
-## 结构
+## 什么会推送、什么不会
 
-| 文件 | 作用 |
-|------|------|
-| `scripts/routes_data.py` | 22 条路线文案（唯一数据源） |
-| `scripts/build_site.py` | 生成 `data/routes.json`，更新 `travel.html` 卡片链接 |
-| `route.html` + `route.js` | **唯一**攻略详情页，URL：`route.html?slug=chuanzang` |
-| `images/routes/{slug}/` | 各路线图片 |
+「推送」= 执行 `git push` 后进 GitHub 仓库。  
+「上网站」= 访客打开 tahoo.me 能看到的页面（仅 `docs/` 内文件）。
 
-不再为每条路线单独生成 `routes/*.html`。
+| 目录/文件 | 会 `git push` | 会上 tahoo.me |
+|-----------|:-------------:|:-------------:|
+| **`docs/`** | ✅ | ✅ 整站 |
+| **`scripts/`** | ✅ | ❌ 仅构建用 |
+| **`README.md`**（本文件） | ✅ | ❌ 只在 GitHub 仓库页显示 |
+| **`scripts/README.md`** | ✅ | ❌ |
+| **`tools/`** | ❌ 已 `.gitignore` | ❌ |
+| **`serve.sh`、`本地预览.command`** | ❌ 已 `.gitignore` | ❌ |
 
-## 改内容后构建
+`README.md` **应该推送**，用来在 GitHub 上说明项目；它不在 `docs/` 里，所以不会变成网站里的一个页面。
+
+### `docs/` — 发布目录（推送 = 上线）
+
+```
+docs/
+├── index.html
+├── travel.html
+├── route.html
+├── CNAME
+├── assets/css、assets/js
+├── data/routes.json
+└── images/
+```
+
+### 仓库根 — 开发与说明
+
+```
+scripts/          # 改 routes_data.py 后运行 build_site.py
+tools/serve.sh    # 本地预览（不提交，可复制 tools/serve.sh 使用）
+```
+
+## GitHub Pages 设置
+
+仓库 **Settings → Pages → Build and deployment**：
+
+- **Source**: Deploy from a branch  
+- **Branch**: `main`  
+- **Folder**: **`/docs`**
+
+若仍选根目录 `/`，上线会缺页面；请改为 **`/docs`**。
+
+## 改内容
 
 ```bash
 python3 scripts/build_site.py
+git add docs/ scripts/ README.md
+git commit -m "更新路线内容"
+git push
 ```
 
 ## 本地预览
 
-**方式 A（推荐）**：双击 `本地预览.command`，或在终端执行：
-
 ```bash
 ./serve.sh
+# 或：bash tools/serve.sh
 ```
 
-浏览器会自动打开路线列表。若 8765 被占用，脚本会自动换端口（看终端里打印的地址）。
-
-**方式 B（无需服务器）**：在 Finder 中双击 `travel.html` 打开列表；详情页双击 `route.html` 需带参数，建议仍用方式 A。
-
-**注意**：不要用 `http://localhost:8080`。本机 8080 常被 Spring Boot 占用，会出现 Whitelabel 404。
+在 `docs/` 目录起静态服务，与线上一致。

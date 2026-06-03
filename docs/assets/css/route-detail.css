@@ -51,6 +51,31 @@
     inset: 0;
     background-size: cover;
     background-position: center;
+    transform: scale(1.05);
+    transition: transform 8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    will-change: transform;
+}
+
+@media (hover: hover) {
+    .detail-hero:hover .detail-hero-bg {
+        transform: scale(1);
+    }
+}
+
+/* 无悬停设备（手机）上缓慢漂移，接近首页氛围 */
+@media (hover: none) {
+    .detail-hero-bg {
+        animation: detail-hero-drift 18s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes detail-hero-drift {
+    from {
+        transform: scale(1.05);
+    }
+    to {
+        transform: scale(1.1);
+    }
 }
 
 .detail-hero-content {
@@ -172,12 +197,30 @@
     overflow: hidden;
     background: var(--bg-card);
     border: 1px solid var(--border);
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+@media (hover: hover) {
+    .detail-gallery-item:hover {
+        border-color: rgba(245, 166, 35, 0.35);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    }
 }
 
 .detail-gallery-item img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+@media (hover: hover) {
+    .detail-gallery-item:hover img {
+        transform: scale(1.06);
+    }
 }
 
 .detail-gallery-item figcaption {

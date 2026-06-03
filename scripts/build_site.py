@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export data/routes.json and refresh travel.html links (single route.html for all details)."""
+"""Build deployable site under docs/ from routes_data.py."""
 
 import json
 import re
@@ -8,8 +8,10 @@ from pathlib import Path
 from routes_data import ROUTES
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data"
-TRAVEL_HTML = ROOT / "travel.html"
+SITE_DIR = ROOT / "docs"
+DATA_DIR = SITE_DIR / "data"
+ASSETS_JS = SITE_DIR / "assets" / "js"
+TRAVEL_HTML = SITE_DIR / "travel.html"
 
 
 def esc(s: str) -> str:
@@ -86,7 +88,8 @@ def export_data_files() -> tuple[Path, Path]:
     data = [normalize_route(r) for r in ROUTES]
     json_path = DATA_DIR / "routes.json"
     json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    js_path = ROOT / "routes-data.js"
+    ASSETS_JS.mkdir(parents=True, exist_ok=True)
+    js_path = ASSETS_JS / "routes-data.js"
     js_path.write_text(
         "window.ROUTES_DATA=" + json.dumps(data, ensure_ascii=False) + ";\n",
         encoding="utf-8",
@@ -108,11 +111,13 @@ def update_travel_html() -> None:
 
 
 def main():
+    if not SITE_DIR.is_dir():
+        raise SystemExit(f"缺少发布目录 {SITE_DIR}")
     json_path, js_path = export_data_files()
     update_travel_html()
+    print(f"Site output: {SITE_DIR}")
     print(f"Wrote {json_path} ({len(ROUTES)} routes)")
-    print(f"Wrote {js_path} (offline / file:// fallback)")
-    print("Updated travel.html → route.html?slug=…")
+    print(f"Wrote {js_path}")
 
 
 if __name__ == "__main__":
