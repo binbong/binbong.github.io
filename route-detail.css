@@ -373,23 +373,12 @@
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.detail-route-map {
-    margin: 0;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    border: 1px solid var(--border);
-    background: var(--bg-card);
-}
-
-.detail-route-map img {
-    width: 100%;
-    display: block;
-}
-
-.detail-route-map figcaption {
-    padding: 14px 18px;
-    font-size: 13px;
-    color: var(--text-secondary);
+.route-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--text-muted);
+    font-size: 16px;
 }
 
 /* ── EV Section ── */

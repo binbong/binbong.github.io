@@ -63,13 +63,6 @@ def main():
                 ok += 1
             else:
                 fail += 1
-        if route.get("route_map"):
-            rm = route["route_map"]
-            dest = slug_dir / ("route-map.svg" if rm["url"].endswith(".svg") else "route-map.jpg")
-            if download(rm["url"], dest):
-                ok += 1
-            else:
-                fail += 1
     print(f"\nDone: {ok} ok, {fail} failed")
 
 

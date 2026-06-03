@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="darkreader-lock">
+    <style id="theme-lock">
+      html { color-scheme: only dark; background: #0a0a0a; color: #f5f5f7; }
+      body { background: #0a0a0a; color: #f5f5f7; }
+      .hero-title, .detail-hero .hero-title { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+      .hero-subtitle, .detail-hero .hero-subtitle { color: rgba(255,255,255,.9) !important; -webkit-text-fill-color: rgba(255,255,255,.9) !important; }
+      .detail-stat-val, .detail-stat-lbl { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+      .detail-lead-text { color: #f5f5f7 !important; -webkit-text-fill-color: #f5f5f7 !important; }
+    </style>
+    <script src="theme-guard.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>路线攻略 — 车行天下</title>
+    <meta name="description" content="新能源自驾路线详细攻略。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="stylesheet" href="route-detail.css?v=6">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">车行<span>天下</span></a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="travel.html" class="active">自驾游</a></li>
+        <li><a href="index.html#vehicle">我的座驾</a></li>
+        <li><a href="index.html#care">养护指南</a></li>
+        <li><a href="index.html#about">关于</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+</nav>
+
+<div id="routeApp">
+    <p class="route-loading">加载攻略中…</p>
+</div>
+
+<section class="detail-nav-bottom" id="routeNavBottom" hidden>
+    <div class="detail-inner detail-nav-inner">
+        <a href="travel.html" class="btn btn-ghost">← 全部路线</a>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">车行<span>天下</span></div>
+            <p class="footer-desc">新能源自驾与用车笔记。驾驶腾势 N7，探索中国之美。</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>栏目</h4>
+                <ul>
+                    <li><a href="travel.html">自驾游</a></li>
+                    <li><a href="index.html#vehicle">我的座驾</a></li>
+                    <li><a href="index.html#care">养护指南</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 车行天下 · tahoo.me</p></div>
+</footer>
+
+<script src="routes-data.js"></script>
+<script src="route.js"></script>
+<script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+    document.getElementById('navToggle').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('open');
+    });
+</script>
+</body>
+</html>

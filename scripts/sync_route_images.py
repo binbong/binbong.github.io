@@ -126,12 +126,6 @@ def main():
             if result:
                 gallery_paths.append(str(result.relative_to(ROOT)).replace("\\", "/"))
             time.sleep(0.3)
-        if route.get("route_map"):
-            rm = route["route_map"]
-            ext = ".svg" if rm["url"].endswith(".svg") else ".jpg"
-            dest = slug_dir / f"route-map{ext}"
-            if not dest.exists() or dest.stat().st_size < 500:
-                save_url(rm["url"], dest)
         updated[slug] = gallery_paths
     out = ROOT / "scripts" / "local_image_paths.json"
     out.write_text(json.dumps(updated, ensure_ascii=False, indent=2), encoding="utf-8")
