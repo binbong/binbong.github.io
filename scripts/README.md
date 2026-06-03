@@ -13,4 +13,4 @@
 python3 scripts/build_site.py
 ```
 
-输出目录：`../docs/`（见仓库根 README）。
+输出目录：仓库根目录（`index.html`、`assets/`、`data/` 等，见根 README）。

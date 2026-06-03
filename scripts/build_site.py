@@ -8,7 +8,7 @@ from pathlib import Path
 from routes_data import ROUTES
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE_DIR = ROOT / "docs"
+SITE_DIR = ROOT
 DATA_DIR = SITE_DIR / "data"
 ASSETS_JS = SITE_DIR / "assets" / "js"
 TRAVEL_HTML = SITE_DIR / "travel.html"
@@ -115,7 +115,7 @@ def main():
         raise SystemExit(f"缺少发布目录 {SITE_DIR}")
     json_path, js_path = export_data_files()
     update_travel_html()
-    print(f"Site output: {SITE_DIR}")
+    print(f"Site output: {SITE_DIR} (repository root, GitHub Pages /)")
     print(f"Wrote {json_path} ({len(ROUTES)} routes)")
     print(f"Wrote {js_path}")
 
